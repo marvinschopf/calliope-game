@@ -1,7 +1,7 @@
 {
-  "name": "magicmarvman-calliope",
+  "name": "magicmarvman-calliope_game",
   "version": "1.0.1",
-  "description": "Examples for Calliope-MINI functions.",
+  "description": "A little calliope-game",
   "license": "MIT",
   "dependencies": {
     "microbit": "calliope-mini/microbit#v2.0.0-rc7-calliope-1.0.1"
