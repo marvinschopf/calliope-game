@@ -1,0 +1,11 @@
+{
+  "name": "magicmarvman-calliope",
+  "version": "1.0.1",
+  "description": "Examples for Calliope-MINI functions.",
+  "license": "MIT",
+  "dependencies": {
+    "microbit": "calliope-mini/microbit#v2.0.0-rc7-calliope-1.0.1"
+  },
+  "targetDependencies": {},
+  "bin": "./source"
+}
