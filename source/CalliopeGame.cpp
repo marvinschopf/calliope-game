@@ -212,6 +212,10 @@ void blinkImage(MicroBitImage img, int times, int delay) {
 	}
 }
 
+bool bothButtonsPressed() {
+  return uBit.buttonB.isPressed() && uBit.buttonA.isPressed();
+}
+
 void mainGame() {
 	showMnet();
 	dadadaSound();
@@ -244,6 +248,13 @@ void mainGame() {
 	leaveBeep();
 
 	blinkImage(Tick, 4, 500);
+
+  while(! bothButtonsPressed()) {
+    showImage(ArrowLeftRight);
+  }
+
+  leaveBeep();
+  blinkImage(Tick, 4, 500);
 
 
 
