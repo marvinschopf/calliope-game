@@ -6,7 +6,6 @@ install:
   - sudo apt-get install python-setuptools  cmake build-essential ninja-build python-dev libffi-dev libssl-dev && sudo easy_install pip
   - sudo apt-get install gcc-arm-none-eabi
   - sudo apt-get install software-properties-common
-  - sudo add-apt-repository ppa:george-edison55/cmake-3.x
   - sudo apt-get install cmake
   - pip install yotta
   
