@@ -7,7 +7,8 @@ install:
   - sudo apt-get install gcc-arm-none-eabi
   - sudo apt-get install software-properties-common
   - sudo apt-get install cmake
-  - sudo ln -s /usr/lib/arm-none-eabi/include/c++/4.9 /usr/lib/arm-none-eabi/include/c++/4.9.3
+  - sudo apt-get install gcc-arm-none-eabi
+  - echo "MarvNet is awesome!!!!!"
   - pip install yotta
   
 script: yotta build
