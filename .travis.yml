@@ -7,6 +7,9 @@ install:
   - sudo apt-get install gcc-arm-none-eabi
   - sudo apt-get install software-properties-common
   - sudo apt-get install cmake
+  - sudo apt-get remove binutils-arm-none-eabi gcc-arm-none-eabi
+  - sudo apt-get install gcc-arm-none-eabi=4.9.3.2015q3-1trusty1
+  - arm-none-eabi-gcc --version
   - pip install yotta
   
 script: yotta build

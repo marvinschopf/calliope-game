@@ -217,9 +217,11 @@ bool bothButtonsPressed() {
 }
 
 void mainGame() {
+  uBit.serial.send("Displaying M-S intro...",SYNC_SLEEP);
 	showMnet();
 	dadadaSound();
 	startSound();
+  uBit.serial.send("Showing smiley...",SYNC_SLEEP);
 	showImage(Smiley);
 	uBit.sleep(1500);
 	uBit.display.clear();
@@ -227,37 +229,47 @@ void mainGame() {
 	blinkImage(Tick, 3, 500);
 
 	uBit.sleep(1000);
-	uBit.display.scroll("READY? STEADY? GO!");
+  uBit.serial.send("Displaying intro...",SYNC_SLEEP);
+	uBit.display.scroll("READY? STEADY? GO!",SYNC_SLEEP);
 	startSound();
 
 	// done with intro
 
+  uBit.serial.send("Waiting for ButtonA...",SYNC_SLEEP);
 	while(! uBit.buttonA.isPressed()) {
 		showImage(ArrowLeft);
 		//blinkImage(ArrowLeft, 1, 500);
 	}
+  uBit.serial.send("ButtonA pressed!",SYNC_SLEEP);
 
 	leaveBeep();
 	
 	blinkImage(Tick, 4, 500);
 
+  uBit.serial.send("Waiting for ButtonB...",SYNC_SLEEP);
+
 	while(! uBit.buttonB.isPressed()) {
 		showImage(ArrowRight);
 	}
+
+  uBit.serial.send("ButtonB pressed!",SYNC_SLEEP);
 
 	leaveBeep();
 
 	blinkImage(Tick, 4, 500);
 
+  uBit.serial.send("Waiting for ButtonAB...",SYNC_SLEEP);
   while(! bothButtonsPressed()) {
     showImage(ArrowLeftRight);
   }
+
+  uBit.serial.send("ButtonAB pressed...",SYNC_SLEEP);
 
   leaveBeep();
   blinkImage(Tick, 4, 500);
 
 
-
+  uBit.serial.send("DONE WITH GAME! Restart with RESET!",SYNC_SLEEP);
 
 
 
